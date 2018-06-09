@@ -1,0 +1,9 @@
+.inventoryIcon {
+  color: red;
+  width: 25px;
+  height: 25px;
+}
+
+.inventoryIcon > span {
+  top: 0;
+}
