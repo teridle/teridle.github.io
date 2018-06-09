@@ -70,7 +70,7 @@ function collectMaterials() {
         holder.append(count);
         mats.append(holder);
       }
-      materials[key] += Math.floor(1 * (35)/ pickaxe.power);
+      materials[key] += Math.round(1 * (pickaxe.power / 35));
       biomeMaterials[key] = biome.materials[key];
     }
   });
@@ -198,6 +198,10 @@ function equipItem(slot, name) {
     if ('def' in equip[slot]) {
       player.def -= equip[slot].def;
     }
+
+    if ('atk' in equip[slot]) {
+      player.atk -= equip[slot].atk;
+    }
   }
 
   equip[slot] = itemList[name];
@@ -243,6 +247,7 @@ function updateInventory(name) {
   if (item.displayId === null) {
     var container = document.createElement("span");
     container.class = "inventoryIcon";
+    container.id = 'container-' + name;
 
     var displayImg = document.createElement("img");
     var countImg = document.createElement("span");
@@ -264,7 +269,7 @@ function updateInventory(name) {
         equipPickaxe(name);
       }
     }
-    
+
     container.append(displayImg);
     container.append(countImg);
 
@@ -273,8 +278,8 @@ function updateInventory(name) {
 
   document.getElementById(item.displayId + "-count").innerHTML = item.amount;
 
-  if (item.amount == 0) {
-    inventoryDisplay.removeChild(document.getElementById(item.displayId));
+  if (item.amount <= 0) {
+    inventoryDisplay.removeChild(document.getElementById('container-' + name));
     delete inventory[name];
   }
 }
