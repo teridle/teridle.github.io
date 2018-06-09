@@ -50,7 +50,6 @@ itemList = {
   },
   'Iron Ore': {
     'img': 'sprites/materials/iron_ore.png',
-    'hp': 100,
     'minPower': 35
   },
   'Iron Pickaxe': {
@@ -60,12 +59,11 @@ itemList = {
       'Iron Bar': 12,
       'Wood': 3
     },
-    'power': 40,
+    'power': 70,
     'station': 'Iron Anvil'
   },
   'Stone Block': {
     'img': 'sprites/materials/stone.png',
-    'hp': 100,
     'minPower': 35
   },
   'Torch': {
@@ -80,7 +78,6 @@ itemList = {
   },
   'Wood': {
     'img': 'sprites/materials/wood.png',
-    'hp': 50,
     'minPower': 35
   },
   'Wood Helmet': {
@@ -123,91 +120,9 @@ itemList = {
   }
 }
 
-monsterList = {
-  "blue_slime": {
-    "hp": 20,
-    "atk": 7,
-    "def": 2,
-    "img": "sprites/monsters/blue_slime.png",
-    "drops": {
-      "Gel": {
-        "min": 1,
-        "max": 2,
-        "rate": 100
-      }
-    }
-  },
-  "green_slime": {
-    "hp": 14,
-    "atk": 6,
-    "def": 0,
-    "img": "sprites/monsters/green_slime.png",
-    "drops": {
-      "Gel": {
-        "min": 1,
-        "max": 2,
-        "rate": 100
-      }
-    }
-  },
-  "Ice Slime": {
-    "hp": 30,
-    "atk": 8,
-    "def": 4,
-    "img": "sprites/monsters/Ice_Slime.gif",
-    "drops": {
-      "Gel": {
-        "min": 1,
-        "max": 2,
-        "rate": 100
-      }
-    }
-  },
-  "Red Slime": {
-    "hp": 35,
-    "atk": 12,
-    "def": 4,
-    "img": "sprites/monsters/Red_Slime.png",
-    "drops": {
-      "Gel": {
-        "min": 1,
-        "max": 2,
-        "rate": 100
-      }
-    }
-  }
-}
 
-biomes = {
-  'Forest' : {
-    'Surface': {
-      'monsters': ['blue_slime', 'green_slime'],
-      'materials': {
-        'Wood': 1,
-        'Stone Block': 3,
-        'Iron Ore': 5
-      }
-    },
-    'Underground': {
-      'monsters': ['Red Slime'],
-      'materials': {
-        'Wood': 1,
-        'Stone Block': 3,
-        'Iron Ore': 5
-      }
-    }
-  },
-  'Snow' : {
-    'Surface': {
-      'monsters': ['Ice Slime'],
-      'materials': {
-        'Wood': 1,
-        'Stone Block': 3,
-        'Iron Ore': 5
-      }
-    }
-  }
-}
+
+
 
 weaponList = {
   "copper_shortsword": {
